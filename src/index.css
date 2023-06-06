@@ -181,8 +181,11 @@ body {
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000000;
+  position: sticky;
+  top: 0;
 }
+
 
 /* Style the navigation bar links */
 .navbar a {
@@ -219,7 +222,7 @@ body {
 .side {
   -ms-flex: 30%; /* IE10 */
   flex: 30%;
-  background-color: #f1f1f1;
+  background-color: #ffdd00;
   padding: 20px;
 }
 
@@ -233,9 +236,9 @@ body {
 
 /* Fake image, just for this example */
 .fakeimg {
-  background-color: #aaa;
+  /* background-color: #aaa;
   width: 100%;
-  padding: 20px;
+  padding: 20px; */
 }
 
 /* Footer */

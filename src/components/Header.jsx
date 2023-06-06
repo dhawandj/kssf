@@ -58,26 +58,27 @@ export default function Header() {
             </button>
           </div>
           <div className="col1">
-            <div className="card card1">
+            <a href="#C2"><div  className="card card1">
               {" "}
               <span>
                 <i
                   style={{ color: "red" }}
-                  class="fa-solid fa-hand-holding-droplet fa-fade fa-xl"
+                  className="fa-solid fa-hand-holding-droplet fa-fade fa-xl"
                 ></i>{" "}
               </span>
               <h5>Donate Blood</h5>
               <p style={{ fontSize: "10px" }}>
                 <b> One bag of blood can bring back one from the dead.</b>
               </p>
-            </div>
+            </div></a>
+            
 
             <div className="card card2">
               {" "}
               <span>
                 <i
                   style={{ color: "green" }}
-                  class="fa-solid fa-bowl-rice fa-flip fa-xl"
+                  className="fa-solid fa-bowl-rice fa-flip fa-xl"
                 ></i>{" "}
               </span>
               <h5>Donate Food</h5>
@@ -90,7 +91,7 @@ export default function Header() {
               <span>
                 <i
                   style={{ color: "blue" }}
-                  class="fa-solid fa-handshake-angle fa-shake fa-xl"
+                  className="fa-solid fa-handshake-angle fa-shake fa-xl"
                 ></i>{" "}
               </span>
               <h5>My Thanks</h5>
@@ -105,7 +106,7 @@ export default function Header() {
               <span>
                 <i
                   style={{ color: "yellow" }}
-                  class="fa-solid fa-hand-fist fa-beat fa-xl"
+                  className="fa-solid fa-hand-fist fa-beat fa-xl"
                 ></i>{" "}
               </span>
               <h5>Your Support</h5>
