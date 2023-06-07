@@ -1,4 +1,6 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { auth } from "../config/firebase";
 
 export default function Header() {
   return (
@@ -30,7 +32,6 @@ export default function Header() {
               {" "}
               KSSF{" "}
             </b>{" "}
-            
             SAMAYA SANJEEVINI FOUNDATION
           </h2>
           <nav>
@@ -41,8 +42,20 @@ export default function Header() {
               <li>
                 <a href="">Region</a>
               </li>
-              <li>
-                <a href="">About</a>
+              <li
+                onClick={() =>
+                  signOut(auth)
+                    .then(() => {
+                      alert("user logged out");
+                      
+                    })
+                    .catch((error) => {
+                      alert("problem in logout " + error.code);
+                    })
+                }
+                id="logout"
+              >
+                Logout
               </li>
             </ul>
           </nav>
@@ -58,20 +71,21 @@ export default function Header() {
             </button>
           </div>
           <div className="col1">
-            <a href="#C2"><div  className="card card1">
-              {" "}
-              <span>
-                <i
-                  style={{ color: "red" }}
-                  className="fa-solid fa-hand-holding-droplet fa-fade fa-xl"
-                ></i>{" "}
-              </span>
-              <h5>Donate Blood</h5>
-              <p style={{ fontSize: "10px" }}>
-                <b> One bag of blood can bring back one from the dead.</b>
-              </p>
-            </div></a>
-            
+            <a href="#C2">
+              <div className="card card1">
+                {" "}
+                <span>
+                  <i
+                    style={{ color: "red" }}
+                    className="fa-solid fa-hand-holding-droplet fa-fade fa-xl"
+                  ></i>{" "}
+                </span>
+                <h5>Donate Blood</h5>
+                <p style={{ fontSize: "10px" }}>
+                  <b> One bag of blood can bring back one from the dead.</b>
+                </p>
+              </div>
+            </a>
 
             <div className="card card2">
               {" "}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SignUpForm } from "./RegForm";
+import { auth } from "../config/firebase";
 
 export default function Navbar() {
   const [showComponent, setShowComponent] = useState(false);
@@ -11,8 +12,11 @@ export default function Navbar() {
       <a onClick={() => setShowComponent(true)}>Login</a>
       {showComponent && <SignUpForm callback={setShowComponent} />}
       <a href="#C4" className="right">
-        Main
+           {auth.currentUser !==null ?auth.currentUser.displayName:"not yet logined"}
+           
       </a>
+      
     </div>
+    
   );
 }

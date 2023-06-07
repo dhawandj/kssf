@@ -130,8 +130,8 @@ html {
 
 /* Add Zoom Animation */
 .animate {
-  -webkit-animation: animatezoom 0.4s;
-  animation: animatezoom 0.4s
+  -webkit-animation: animatezoom 10s;
+  animation: animatezoom 0.3s
 }
 
 @-webkit-keyframes animatezoom {
